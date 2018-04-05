@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.sdkVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         applicationId "uk.co.senab.photoview.sample"
-        minSdkVersion 14
-        targetSdkVersion rootProject.ext.sdkVersion
-        versionCode 100
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.targetSdkVersion
+        versionCode 1
         versionName "1.0"
     }
     lintOptions {
@@ -17,9 +17,9 @@ android {
 }
 
 dependencies {
-    compile "com.android.support:appcompat-v7:$supportLibVersion"
-    compile "com.android.support:design:$supportLibVersion"
-    compile "com.android.support:recyclerview-v7:$supportLibVersion"
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile project(':photoview')
+    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+    implementation "com.android.support:design:$supportLibVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibVersion"
+    implementation "com.squareup.picasso:picasso:$picassoVersion"
+    implementation project(':photoview')
 }

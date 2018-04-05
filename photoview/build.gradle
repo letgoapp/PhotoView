@@ -1,19 +1,17 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion rootProject.ext.sdkVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion rootProject.ext.sdkVersion
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
     }
 }
 
 dependencies {
-    compile "com.android.support:support-core-utils:$supportLibVersion"
+    implementation "com.android.support:support-core-utils:$supportLibVersion"
 }
-
-apply from: 'https://raw.githubusercontent.com/Commit451/gradle-android-javadocs/1.0.0/gradle-android-javadocs.gradle'

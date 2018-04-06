@@ -196,8 +196,20 @@ public class PhotoView extends ImageView {
         return attacher.getScale();
     }
 
+    public float getInitialScale() {
+        return attacher.getInitialScale();
+    }
+
+    public boolean isZoomed() {
+        return attacher.isZoomed();
+    }
+
     public void setAllowParentInterceptOnEdge(boolean allow) {
         attacher.setAllowParentInterceptOnEdge(allow);
+    }
+
+    public void setForceParentHandleDrag(boolean shouldForce) {
+        attacher.setForceParentHandleDrag(shouldForce);
     }
 
     public void setMinimumScale(float minimumScale) {
@@ -246,6 +258,10 @@ public class PhotoView extends ImageView {
 
     public void setScale(float scale, float focalX, float focalY, boolean animate) {
         attacher.setScale(scale, focalX, focalY, animate);
+    }
+
+    public void setInitialScale(float scale) {
+        attacher.setInitialScale(scale);
     }
 
     public void setZoomTransitionDuration(int milliseconds) {

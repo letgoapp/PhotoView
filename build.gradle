@@ -17,11 +17,11 @@ allprojects {
     }
 
     project.ext {
-        buildToolsVersion = "27.0.3"
+        letgoBuildToolsVersion = "27.0.3"
         supportLibVersion = '27.1.0'
         picassoVersion = "2.5.2"
-        minSdkVersion = 16
-        targetSdkVersion = 25
-        compileSdkVersion = 27
+        letgoMinSdkVersion = 16
+        letgoTargetSdkVersion = 25
+        letgoCompileSdkVersion = 27
     }
 }

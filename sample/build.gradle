@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion rootProject.ext.letgoCompileSdkVersion
+    buildToolsVersion rootProject.ext.letgoBuildToolsVersion
 
     defaultConfig {
         applicationId "uk.co.senab.photoview.sample"
-        minSdkVersion project.ext.minSdkVersion
-        targetSdkVersion project.ext.targetSdkVersion
+        minSdkVersion project.ext.letgoMinSdkVersion
+        targetSdkVersion project.ext.letgoTargetSdkVersion
         versionCode 1
         versionName "1.0"
     }

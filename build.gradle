@@ -18,7 +18,7 @@ allprojects {
 
     project.ext {
         letgoBuildToolsVersion = "27.0.3"
-        supportLibVersion = '27.1.0'
+        supportVersion = '27.1.0'
         picassoVersion = "2.5.2"
         letgoMinSdkVersion = 16
         letgoTargetSdkVersion = 25
